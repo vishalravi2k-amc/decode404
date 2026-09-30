@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decode404: AI Incident Response Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #0f172a; color: #f8fafc; padding: 20px; }
+        .card { background: #1e293b; padding: 20px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        button { background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #2563eb; }
+        pre { background: #0f172a; padding: 10px; border-radius: 4px; overflow-x: auto; color: #38bdf8; }
+    </style>
+</head>
+<body>
+    <h1>Decode404: DevOps Copilot & Incident Response Agent</h1>
+    <div class="card">
+        <h3>Live Telemetry & Controls</h3>
+        <button onclick="triggerAlert()">1. Trigger Synthetic Alert</button>
+    </div>
+    <div class="card">
+        <h3>System Output / Response Feed</h3>
+        <pre id="output">System ready. Click button to simulate incoming incident...</pre>
+    </div>
+
+    <script>
+        async function triggerAlert() {
+            document.getElementById('output').innerText = "Running anomaly detection & Markov prediction...";
+            const res = await fetch('/api/trigger-alert', { method: 'POST' });
+            const data = await res.json();
+            document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+</html>
