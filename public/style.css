@@ -1,0 +1,36 @@
+/* Decode404 Enterprise SOC Custom Styling */
+:root {
+  --soc-bg: #080c14;
+  --soc-card: #0f172a;
+  --soc-border: #1e293b;
+  --soc-cyan: #06b6d4;
+  --soc-red: #ef4444;
+  --soc-emerald: #10b981;
+}
+
+body {
+  background-color: var(--soc-bg);
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.terminal-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.terminal-scroll::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.35);
+}
